@@ -14,7 +14,7 @@ APP 列表
 
 编译说明
 ---
- > 从 OpenWrt 的 [SDK][S] 编译  
+ > 从 OpenWrt 的 [SDK][S] 编译
 
 ```bash
 # 解压下载好的 SDK

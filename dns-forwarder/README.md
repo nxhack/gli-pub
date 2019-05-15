@@ -6,12 +6,12 @@ DNS-Forwarder for OpenWrt
 简介
 ---
 
- 本项目是 [DNS-Forwarder][1] 在 OpenWrt 上的移植  
+ 本项目是 [DNS-Forwarder][1] 在 OpenWrt 上的移植
 
 编译
 ---
 
- - 从 OpenWrt 的 [SDK][S] 编译  
+ - 从 OpenWrt 的 [SDK][S] 编译
 
    ```bash
    # 以 ar71xx 平台为例
@@ -28,9 +28,9 @@ DNS-Forwarder for OpenWrt
 配置
 ---
 
- - 默认 DNS 服务器端口为 `5300`, 可使用 [LuCI][L] 进行配置  
+ - 默认 DNS 服务器端口为 `5300`, 可使用 [LuCI][L] 进行配置
 
- - 建议作为 [ChinaDNS][3] 的上游服务器使用, 配置方法参考 [Wiki][W]  
+ - 建议作为 [ChinaDNS][3] 的上游服务器使用, 配置方法参考 [Wiki][W]
 
 
  [1]: https://github.com/aa65535/hev-dns-forwarder

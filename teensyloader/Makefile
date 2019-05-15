@@ -17,7 +17,7 @@ PKG_SOURCE_VERSION:=ee411ad7caa2b40751f1b776c3311320777a9609
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 #PKG_MD5SUM:=c52d65fdee0712af6f77eb2b60974ac7
 
-# This specifies the directory where we're going to build the program. 
+# This specifies the directory where we're going to build the program.
 # The root build directory, $(BUILD_DIR), is by default the build_mipsel
 # directory in your OpenWrt SDK directory
 #PKG_BUILD_DIR := $(BUILD_DIR)/$(PKG_NAME)
@@ -25,7 +25,7 @@ PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 
 include $(INCLUDE_DIR)/package.mk
 
- 
+
 
 # Specify package information for this program.
 # The variables defined here should be self explanatory.
@@ -45,7 +45,7 @@ define Package/teensyloader/description
 	teensloader
 endef
 
- 
+
 
 # Specify what needs to be done to prepare for building the package.
 # In our case, we need to copy the source files to the build directory.

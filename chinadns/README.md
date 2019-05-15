@@ -6,12 +6,12 @@ ChinaDNS for OpenWrt
 简介
 ---
 
- 本项目是 [ChinaDNS][1] 在 OpenWrt 上的移植  
+ 本项目是 [ChinaDNS][1] 在 OpenWrt 上的移植
 
 编译
 ---
 
- - 从 OpenWrt 的 [SDK][S] 编译  
+ - 从 OpenWrt 的 [SDK][S] 编译
 
    ```bash
    # 以 ar71xx 平台为例
@@ -28,21 +28,21 @@ ChinaDNS for OpenWrt
 配置
 ---
 
- - 默认 DNS 服务器端口为 `5353`, 可使用 [LuCI][L] 进行配置  
+ - 默认 DNS 服务器端口为 `5353`, 可使用 [LuCI][L] 进行配置
 
- - 可搭配路由器自带的 Dnsmasq 使用 借助其 DNS 缓存提升查询速度  
+ - 可搭配路由器自带的 Dnsmasq 使用 借助其 DNS 缓存提升查询速度
 
-   >LuCI 中定位至「网络 - DHCP/DNS」  
-   >「基本设置」 **本地服务器** 填写 `127.0.0.1#5353`  
-   >「HOSTS和解析文件」勾选 **忽略解析文件**  
+   >LuCI 中定位至「网络 - DHCP/DNS」
+   >「基本设置」 **本地服务器** 填写 `127.0.0.1#5353`
+   >「HOSTS和解析文件」勾选 **忽略解析文件**
 
- - 不要在 ChinaDNS 的上游使用带 DNS 缓存的本地服务器, 可能无法得到预期效果  
+ - 不要在 ChinaDNS 的上游使用带 DNS 缓存的本地服务器, 可能无法得到预期效果
 
- - 遇到 UDP 不稳定的情况, 建议使用 [DNS-Forwarder][D] 将 DNS 查询转换为 TCP 协议  
+ - 遇到 UDP 不稳定的情况, 建议使用 [DNS-Forwarder][D] 将 DNS 查询转换为 TCP 协议
 
-   >ChinaDNS 的上游 DNS 服务器使用 DNS-Forwarder 即可, 配置方法参考 [Wiki][W]  
+   >ChinaDNS 的上游 DNS 服务器使用 DNS-Forwarder 即可, 配置方法参考 [Wiki][W]
 
- - 更新 [/etc/chinadns_chnroute.txt][3]  
+ - 更新 [/etc/chinadns_chnroute.txt][3]
    ```bash
     wget -O- 'http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest' | awk -F\| '/CN\|ipv4/ { printf("%s/%d\n", $4, 32-log($5)/log(2)) }' > /etc/chinadns_chnroute.txt
    ```

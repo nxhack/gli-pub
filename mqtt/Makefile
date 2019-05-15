@@ -48,4 +48,3 @@ define Package/mqtt/install
 endef
 
 $(eval $(call BuildPackage,mqtt))
-
